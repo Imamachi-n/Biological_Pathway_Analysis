@@ -1,3 +1,4 @@
+###Pathway_analysis###
 library(pathview)
 library(gage)
 library(gageData)
@@ -32,4 +33,3 @@ keggresids <- path.ids[!is.na(keggresids)]
 plot_pathway = function(pid) pathview(gene.data=foldchanges, pathway.id=pid, species="hsa", new.signature=FALSE)
 
 tmp = sapply(keggresids, function(pid) pathview(gene.data=foldchanges, pathway.id=pid, species="hsa"))
-
